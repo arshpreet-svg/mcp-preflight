@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-preflight"
+version = "0.1.0"
+description = "Check that an MCP server is ready for Alexa+ and other voice assistants: spec compliance, tool quality and spoken responses."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["mcp>=2.3", "uvicorn"]
+
+[project.scripts]
+mcp-preflight = "mcp_preflight.cli:main"
+
+[tool.setuptools]
+packages = ["mcp_preflight"]
